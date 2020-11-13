@@ -1,0 +1,87 @@
+.calendar {
+    max-width: 380px;
+    padding: 30px;
+    flex: 1 1 auto;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 23px #EDEDED;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.header > div {
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    color: rgba(52, 72, 94, 0.536062);
+}
+
+.title {
+    margin: 0 0 30px 5px;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-align: left;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #6B7897;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.row > div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #7C86A2;
+}
+
+.row span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: inherit;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.row span:hover {
+    opacity: 0.7;
+}
+
+.today > span {
+    font-weight: bold;
+}
+
+.today.active:not(.selected) > span {
+    color: #AA3434;
+}
+
+.selected > span {
+    color: #fff;
+    background: linear-gradient(0deg, #7ED5FC 0%, #90D9FA 100%);
+}
+
+.active:not(.today):not(.selected) > span {
+    color: #AA3434;
+}
